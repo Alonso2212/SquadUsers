@@ -1,0 +1,20 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head> 
+    <title>SQUAD Users</title> 
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+	<form action="#" th:action="@{/checkCaptcha}" th:object="${checkCaptcha}" method="get">
+	<div id="divCaptcha">
+	     <p th:text="'captcha: ' + ${captcha}" />
+	    <input type="text" th:field="*{captcha}">
+	    <input type="submit" id="botonSubmit"    value="Reintentar"></input>	    
+    </div>    
+    <div>
+    <p>Captcha introducido incorrecto</p>
+    </div> 
+    </form>
+</body>
+
+</html>
